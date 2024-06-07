@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="loading" type="id" />
+    <item name="Email" type="id" />
+    <item name="etPassword" type="id" />
+    <item name="loginError" type="id" />
+    <item name="btnLogin" type="id" />
+    <item name="tvOr" type="id" />
+</resources>
