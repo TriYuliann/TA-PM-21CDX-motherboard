@@ -21,6 +21,16 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu1Fragment())
             .commit()
 
+        // buat event untuk "menu1"
+        binding.btnMenu1.setOnClickListener {
+            menu = 1
+
+            // Tampilkan fram "lay_button
+            binding.layButton.visibility = View.VISIBLE
+
+            supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu1Fragment())
+                .commit()
+        }
         binding.btnMenu2.setOnClickListener {
             menu = 2
 
