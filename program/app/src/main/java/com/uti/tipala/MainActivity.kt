@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu1Fragment())
                 .commit()
         }
+        // buat event untuk "menu2"
         binding.btnMenu2.setOnClickListener {
             menu = 2
 
@@ -38,6 +39,26 @@ class MainActivity : AppCompatActivity() {
             binding.layButton.visibility = View.VISIBLE
 
             supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu2Fragment())
+                .commit()
+        }
+        // buat event untuk "menu3"
+        binding.btnMenu2.setOnClickListener {
+            menu = 3
+
+            // Tampilkan fram "lay_button
+            binding.layButton.visibility = View.VISIBLE
+
+            supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu3Fragment())
+                .commit()
+        }
+        // buat event untuk "menu4"
+        binding.btnMenu2.setOnClickListener {
+            menu = 4
+
+            // Tampilkan fram "lay_button
+            binding.layButton.visibility = View.VISIBLE
+
+            supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu4Fragment())
                 .commit()
         }
 
