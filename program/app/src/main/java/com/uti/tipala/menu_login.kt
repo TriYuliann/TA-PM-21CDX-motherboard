@@ -22,7 +22,7 @@ class menu_login : AppCompatActivity() {
             // buka "main_activity/menu utama apk"
             //Intent(Sumber, Tujuan)
             val intent = Intent(this,
-                menu_login::class.java)
+                MainActivity::class.java)
             startActivity(intent)
         }
     }
