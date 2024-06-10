@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
         // buat event untuk "menu3"
-        binding.btnMenu2.setOnClickListener {
+        binding.btnMenu3.setOnClickListener {
             menu = 3
 
             // Tampilkan fram "lay_button
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
         // buat event untuk "menu4"
-        binding.btnMenu2.setOnClickListener {
+        binding.btnMenu4.setOnClickListener {
             menu = 4
 
             // Tampilkan fram "lay_button
