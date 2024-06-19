@@ -8,4 +8,9 @@
 
     <string name="facebook_app_id">526498191468722</string>
     <string name="fb_login_protocol_scheme">fb526498191468722</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="text3">"Pantai Mutun hanya berjarak 25 kilometer dari Kota Bandar Lampung yang dapat ditempuh dengan berkendara selama 30 menit. Di dekat pantai ini terdapat pula Pulau Tangkil, sebuah destinasi wisata pulau alami yang masih terjaga kealamiannya. Untuk menjangkau pulau Tangkil, disediakan perahu oleh pengelola pantai. "</string>
 </resources>
