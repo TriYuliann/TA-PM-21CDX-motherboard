@@ -44,7 +44,7 @@
             android:layout_weight="1"
             android:layout_marginRight="10dp"
             android:background="@drawable/btn_box"
-            android:text="Galleri" />
+            android:text="Tentang" />
 
         <Button
             android:id="@+id/btn_menu4"
