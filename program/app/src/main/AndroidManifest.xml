@@ -22,14 +22,6 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Base.Theme.MainActivity">
-
-            <!-- Meta-data untuk Navigation Drawer -->
-            <meta-data
-                android:name="android.app.lib.name"
-                android:value="" />
-
-        </activity>
+            android:name=".MainActivity"/>
     </application>
 </manifest>

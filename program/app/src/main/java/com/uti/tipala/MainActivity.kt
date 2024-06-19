@@ -5,6 +5,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import com.uti.tipala.databinding.ActivityMainBinding
+import android.view.MenuItem
+import android.view.Window
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,16 +59,20 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu3Fragment())
                 .commit()
         }
-        // buat event untuk "menu4"
-        binding.btnMenu4.setOnClickListener {
-            menu = 4
 
-            // Tampilkan fram "lay_button
-            binding.layButton.visibility = View.VISIBLE
+        // buat event "backpressed"
+        onBackPressedDispatcher.addCallback(object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // jika menu = 2 atau menu = 3
+                // if (menu != 1) { // PENJELASAN MENU 1-100 AKAN KEMBALI KE MENU 1
+                if (menu == 2 || menu == 3) {
+                    // panggil event "btnMenu1"
+                    binding.btnMenu1.performClick()
+                }
+            }
 
-            supportFragmentManager.beginTransaction().replace(R.id.frm_content, Menu4Fragment())
-                .commit()
-        }
+        })
+
 
     }
 
