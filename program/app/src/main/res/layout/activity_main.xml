@@ -10,11 +10,13 @@
         android:id="@+id/lay_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btn_menu1"
@@ -22,7 +24,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_weight="1"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/btn_box"
             android:text="Home" />
 
@@ -32,7 +34,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_weight="1"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/btn_box"
             android:text="Explore" />
 
@@ -42,7 +44,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_weight="1"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:background="@drawable/btn_box"
             android:text="Tentang" />
 
@@ -54,6 +56,7 @@
             android:layout_weight="1"
             android:background="@drawable/btn_box"
             android:text="Profile" />
+
     </LinearLayout>
 
     <FrameLayout
