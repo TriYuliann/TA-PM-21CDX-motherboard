@@ -19,30 +19,41 @@
         <Button
             android:id="@+id/btn_menu1"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_weight="1"
-            android:text="Button 1" />
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_box"
+            android:text="Home" />
 
         <Button
             android:id="@+id/btn_menu2"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_weight="1"
-            android:text="Button 2" />
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_box"
+            android:text="Explore" />
 
         <Button
             android:id="@+id/btn_menu3"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_weight="1"
-            android:text="Button 3" />
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_box"
+            android:text="Galleri" />
 
         <Button
             android:id="@+id/btn_menu4"
             android:layout_width="wrap_content"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_weight="1"
-            android:text="Button 4" />
+            android:background="@drawable/btn_box"
+            android:text="Profile" />
     </LinearLayout>
 
     <FrameLayout
