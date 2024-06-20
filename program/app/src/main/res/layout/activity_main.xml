@@ -49,7 +49,7 @@
             android:background="@drawable/btn_box"
             android:text="Profile" />
 
-    </LinearLayout>
+    </LinearLayout>-
 
     <FrameLayout
         android:id="@+id/frm_content"

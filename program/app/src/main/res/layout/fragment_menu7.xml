@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Menu4Fragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Ini Menu 4"
-        android:textSize="50sp" />
-=======
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -29,7 +12,7 @@
     <ImageView
         android:layout_width="415dp"
         android:layout_height="300dp"
-        android:src="@drawable/sebalang" />
+        android:src="@drawable/klara" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +20,7 @@
         android:layout_gravity="center"
         android:background="#093B51"
         android:padding="20dp"
-        android:text="Pantai Sebalang"
+        android:text="Pantai Klara"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="30dp" />
@@ -45,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="   Dusun Sebalang, Tarahan, Kecamatan Katibung, Kabupaten Lampung Selatan, Provinsi Lampung."
+        android:text="Ketapang labupaten Pesawaran Lampung"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="16dp" />
 
@@ -57,11 +40,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="20dp"
-            android:text="@string/text5"
+            android:text="@string/text7"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
 
     </ScrollView>
->>>>>>> 5e5ca7b4b467652e59307191f5e601e759204236
 
 </FrameLayout>
