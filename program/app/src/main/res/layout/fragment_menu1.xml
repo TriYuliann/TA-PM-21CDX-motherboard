@@ -77,14 +77,12 @@
             android:layout_width="165dp"
             android:layout_height="100dp"
             android:layout_marginStart="28dp"
-            android:layout_marginBottom="132dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/box"
             android:gravity="center"
             android:text="Menu 3"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home1"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/home1" />
 
         <TextView
             android:id="@+id/home4"
