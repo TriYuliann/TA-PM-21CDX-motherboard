@@ -5,19 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Menu2Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+//Fragment yang menampilkan menu kedua
 class Menu2Fragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -29,24 +24,38 @@ class Menu2Fragment : Fragment() {
         }
     }
 
+    // Metode untuk menginflasi layout fragment dan menginisialisasi view
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu2, container, false)
+        // Menginflasi layout untuk fragment ini
+        val view = inflater.inflate(R.layout.fragment_menu2, container, false)
+
+        // Inisialisasi RecyclerView dan data
+        recylerView = view.findViewById(R.id.recyclerView)
+        recylerView.layoutManager = LinearLayoutManager(context)
+        recylerView.setHasFixedSize(true)
+
+        // Inisialisasi daftar gambar dan judul
+        imageList = arrayOf(
+            R.drawable.hantu,
+            R.drawable.hiu
+        )
+
+        titleList = arrayOf(
+            "Pantai Teluk Hantu",
+            "Pantai Gigi Hiu"
+        )
+
+        // Inisialisasi daftar data
+        dataList = arrayListOf()
+        getData()
+
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Menu2Fragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Menu2Fragment().apply {
@@ -55,5 +64,21 @@ class Menu2Fragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    // Deklarasi variabel untuk RecyclerView dan data
+    private lateinit var recylerView: RecyclerView
+    private lateinit var dataList: ArrayList<DataClass>
+    lateinit var imageList: Array<Int>
+    lateinit var titleList: Array<String>
+
+    // Metode untuk mendapatkan data dan menambahkannya ke dataList
+    private fun getData() {
+        for (i in imageList.indices) {
+            val dataClass = DataClass(imageList[i], titleList[i])
+            dataList.add(dataClass)
+        }
+        // Mengatur adapter untuk RecyclerView
+        recylerView.adapter = AdapterClass(dataList)
     }
 }
