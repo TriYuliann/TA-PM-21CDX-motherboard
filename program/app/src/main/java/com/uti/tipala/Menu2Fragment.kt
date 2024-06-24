@@ -39,13 +39,20 @@ class Menu2Fragment : Fragment() {
 
         // Inisialisasi daftar gambar dan judul
         imageList = arrayOf(
+            R.drawable.sebalang,
+            R.drawable.sariringgung,
+            R.drawable.kelagian,
+            R.drawable.klara,
             R.drawable.hantu,
-            R.drawable.hiu
-        )
+            R.drawable.hiu,
+            R.drawable.putih,
+            R.drawable.mahitam,
+            R.drawable.pahawang,
+            R.drawable.mutun
+            )
 
         titleList = arrayOf(
-            "Pantai Teluk Hantu",
-            "Pantai Gigi Hiu"
+            "title"
         )
 
         // Inisialisasi daftar data
