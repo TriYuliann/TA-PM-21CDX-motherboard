@@ -52,7 +52,16 @@ class Menu2Fragment : Fragment() {
             )
 
         titleList = arrayOf(
-            "title"
+            "Pantai Sebalang",
+            "Pantai Sari Ringgung",
+            "Pantai Pulau Kelagian",
+            "Pantai Klara",
+            "Pantai Teluk Hantu",
+            "Pantai Gigi Hiu",
+            "Pantai Pasir Putih",
+            "Pantai Mahitam",
+            "Pantai Pulau Pahawang",
+            "Pantai Mutun"
         )
 
         // Inisialisasi daftar data
