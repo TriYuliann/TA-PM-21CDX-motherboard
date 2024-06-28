@@ -10,6 +10,11 @@
           <theme>@style/Theme.Tipala</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_activity.xml">
+        <config>
+          <theme>@style/Theme.Tipala</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_menu1.xml">
         <config>
           <theme>@style/Theme.Tipala</theme>
@@ -92,8 +97,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a06057e-69ea-4b69-9411-d25fc71bccb7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/uti/tipala/DetailActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uti/tipala/Menu2Fragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uti/tipala/Menu2Fragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +111,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[wgv869dekjljfm5t]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -113,8 +121,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -142,6 +150,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\TA-PM-21CDX-motherboard\program\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.801688494">
+      <recent name="com.uti.tipala" />
     </key>
   </component>
   <component name="RunManager">
