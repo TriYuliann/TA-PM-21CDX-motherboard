@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.Locale
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -34,6 +36,7 @@ class Menu2Fragment : Fragment() {
 
         // Inisialisasi RecyclerView dan data
         recylerView = view.findViewById(R.id.recyclerView)
+        searchView = view.findViewById(R.id.search)
         recylerView.layoutManager = LinearLayoutManager(context)
         recylerView.setHasFixedSize(true)
 
@@ -49,7 +52,7 @@ class Menu2Fragment : Fragment() {
             R.drawable.mahitam,
             R.drawable.pahawang,
             R.drawable.mutun
-            )
+        )
 
         titleList = arrayOf(
             "Pantai Sebalang",
@@ -65,8 +68,34 @@ class Menu2Fragment : Fragment() {
         )
 
         // Inisialisasi daftar data
-        dataList = arrayListOf()
+        dataList = arrayListOf<DataClass>()
+        searchList = arrayListOf<DataClass>()
         getData()
+
+        searchView.clearFocus()
+        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchView.clearFocus()
+                return true
+            }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                searchList.clear()
+                val searchText = newText!!.toLowerCase(Locale.getDefault())
+                if (searchText.isNotEmpty()){
+                    dataList.forEach{
+                        if (it.dataTitle.toLowerCase(Locale.getDefault()).contains(searchText)) {
+                            searchList.add(it)
+                        }
+                    }
+                    recylerView.adapter!!.notifyDataSetChanged()
+                } else {
+                    searchList.clear()
+                    searchList.addAll(dataList)
+                    recylerView.adapter!!.notifyDataSetChanged()
+                }
+                return false
+            }
+        })
 
         return view
     }
@@ -87,6 +116,8 @@ class Menu2Fragment : Fragment() {
     private lateinit var dataList: ArrayList<DataClass>
     lateinit var imageList: Array<Int>
     lateinit var titleList: Array<String>
+    private lateinit var searchView: androidx.appcompat.widget.SearchView
+    private lateinit var searchList: ArrayList<DataClass>
 
     // Metode untuk mendapatkan data dan menambahkannya ke dataList
     private fun getData() {
@@ -95,6 +126,7 @@ class Menu2Fragment : Fragment() {
             dataList.add(dataClass)
         }
         // Mengatur adapter untuk RecyclerView
-        recylerView.adapter = AdapterClass(dataList)
+        searchList.addAll(dataList)
+        recylerView.adapter = AdapterClass(searchList)
     }
 }
