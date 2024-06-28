@@ -1,5 +1,6 @@
 package com.uti.tipala
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -67,6 +68,32 @@ class Menu2Fragment : Fragment() {
             "Pantai Mutun"
         )
 
+        descList = arrayOf(
+            getString(R.string.text5),
+            getString(R.string.text6),
+            getString(R.string.text8),
+            getString(R.string.text7),
+            getString(R.string.text9),
+            getString(R.string.text10),
+            getString(R.string.text11),
+            getString(R.string.text12),
+            getString(R.string.text4),
+            getString(R.string.text3)
+        )
+
+        detailImageList = arrayOf(
+            R.drawable.sebalang,
+            R.drawable.sariringgung,
+            R.drawable.kelagian,
+            R.drawable.klara,
+            R.drawable.hantu,
+            R.drawable.hiu,
+            R.drawable.putih,
+            R.drawable.mahitam,
+            R.drawable.pahawang,
+            R.drawable.mutun
+        )
+
         // Inisialisasi daftar data
         dataList = arrayListOf<DataClass>()
         searchList = arrayListOf<DataClass>()
@@ -96,9 +123,17 @@ class Menu2Fragment : Fragment() {
                 return false
             }
         })
+        myAdapter = AdapterClass(searchList)
+        recylerView.adapter = myAdapter
 
+        myAdapter.onItemClick = {
+            val intent = Intent(requireContext(), DetailActivity::class.java)
+            intent.putExtra("android", it)
+            startActivity(intent)
+        }
         return view
     }
+
 
     companion object {
         @JvmStatic
@@ -116,13 +151,16 @@ class Menu2Fragment : Fragment() {
     private lateinit var dataList: ArrayList<DataClass>
     lateinit var imageList: Array<Int>
     lateinit var titleList: Array<String>
+    lateinit var descList: Array<String>
+    lateinit var detailImageList: Array<Int>
+    private lateinit var myAdapter: AdapterClass
     private lateinit var searchView: androidx.appcompat.widget.SearchView
     private lateinit var searchList: ArrayList<DataClass>
 
     // Metode untuk mendapatkan data dan menambahkannya ke dataList
     private fun getData() {
         for (i in imageList.indices) {
-            val dataClass = DataClass(imageList[i], titleList[i])
+            val dataClass = DataClass(imageList[i], titleList[i], descList[i], detailImageList[i])
             dataList.add(dataClass)
         }
         // Mengatur adapter untuk RecyclerView
