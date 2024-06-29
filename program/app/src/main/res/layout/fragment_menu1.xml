@@ -15,7 +15,7 @@
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="42dp"
+            android:layout_height="55dp"
             android:id="@+id/amazonName"
             android:text="Tipala"
             android:textSize="40sp"
@@ -70,7 +70,6 @@
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
-                    android:id="@+id/tambahwisata"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -105,7 +104,6 @@
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
-                    android:id="@+id/wisatasaya"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -153,28 +151,27 @@
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
-                    android:id="@+id/tentang"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/homeName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/homeImage"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:id="@+id/homeName"
                         android:text="Tentang"
+                        android:textSize="20sp"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/homeImage"/>
 
                     <ImageView
-                        android:id="@+id/homeImage"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
-                        android:layout_centerHorizontal="true"
+                        android:id="@+id/homeImage"
+                        android:src="@drawable/baseline_account_box_24"
                         android:layout_marginTop="15dp"
-                        android:src="@drawable/baseline_account_box_24" />
+                        android:layout_centerHorizontal="true"/>
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -188,7 +185,6 @@
                 app:cardCornerRadius="20dp">
 
                 <RelativeLayout
-                    android:id="@+id/gallery"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
