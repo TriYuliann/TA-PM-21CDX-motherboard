@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 class DetailActivity : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class DetailActivity : AppCompatActivity() {
         val image = findViewById<ImageView>(R.id.detailImage)
         val desc = findViewById<TextView>(R.id.detailDesc)
         val mapsButton = findViewById<Button>(R.id.button4)
+        val checkoutButton = findViewById<Button>(R.id.btn_checkout)
 
         // Mendapatkan data dari intent
         val data = intent.getParcelableExtra<DataClass>("android")
@@ -38,6 +40,11 @@ class DetailActivity : AppCompatActivity() {
                 intent.setPackage("com.google.android.apps.maps")  // Memastikan menggunakan Google Maps
                 startActivity(intent)
             }
+        }
+
+        // Menambahkan logika untuk tombol Checkout
+        checkoutButton.setOnClickListener {
+            Toast.makeText(applicationContext, "Pembelian Berhasil", Toast.LENGTH_SHORT).show()
         }
     }
 }

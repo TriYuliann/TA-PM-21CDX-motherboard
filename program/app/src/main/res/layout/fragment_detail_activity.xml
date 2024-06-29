@@ -8,57 +8,70 @@
     tools:context=".DetailActivity">
 
     <TextView
+        android:id="@+id/detailTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/detailTitle"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="Pantai Sebalang"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="28sp"
-        android:layout_marginStart="16dp"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/detailImage"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:id="@+id/detailImage"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:scaleType="fitXY"
         android:src="@drawable/sebalang"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detailTitle"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailTitle" />
 
     <TextView
+        android:id="@+id/detailDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/detailDesc"
-        android:layout_marginTop="20dp"
-        android:text="@string/text5"
-        android:textColor="@color/black"
-        android:textAlignment="viewStart"
-        android:textSize="20sp"
-        android:padding="12dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:text="@string/text5"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detailImage"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailImage" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Maps"
+        android:layout_marginStart="72dp"
         android:drawableLeft="@drawable/baseline_location_on_24"
         android:drawablePadding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:text="Maps"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detailDesc" />
+        app:layout_constraintTop_toBottomOf="@id/detailDesc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:drawableLeft="@drawable/baseline_trolley_24"
+        android:drawablePadding="8dp"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailDesc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
