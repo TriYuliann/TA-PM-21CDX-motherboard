@@ -3,12 +3,21 @@ package com.uti.tipala
 import android.os.Parcel
 import android.os.Parcelable
 
-data class DataClass(var dataImage:Int, var  dataTitle:String, var dataDesc: String, var dataDetailImage: Int): Parcelable {
+data class DataClass(
+    val dataImage: Int,
+    val dataTitle: String,
+    val dataDesc: String,
+    val dataDetailImage: Int,
+    val latitude: Double,  // Tambahkan latitude
+    val longitude: Double // Tambahkan longitude
+) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readDouble(),  // Baca latitude
+        parcel.readDouble()   // Baca longitude
     ) {
     }
 
@@ -17,6 +26,8 @@ data class DataClass(var dataImage:Int, var  dataTitle:String, var dataDesc: Str
         parcel.writeString(dataTitle)
         parcel.writeString(dataDesc)
         parcel.writeInt(dataDetailImage)
+        parcel.writeDouble(latitude)  // Tulis latitude
+        parcel.writeDouble(longitude) // Tulis longitude
     }
 
     override fun describeContents(): Int {
