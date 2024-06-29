@@ -1,10 +1,12 @@
 package com.uti.tipala
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,22 @@ class Menu3Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu3, container, false)
+        val view = inflater.inflate(R.layout.fragment_menu3, container, false)
+
+        // Temukan tombol Log Out dan setel OnClickListener
+        val btnLogOut: Button = view.findViewById(R.id.logout)
+        btnLogOut.setOnClickListener {
+            // Intent untuk membuka MenuLoginActivity
+            val intent = Intent(requireContext(), menu_login::class.java)
+
+            // Flag untuk membuat MenuLoginActivity menjadi activity pertama di stack
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
+            startActivity(intent)
+            requireActivity().finish() // Menutup aktivitas ini dari stack
+        }
+
+        return view
     }
 
     companion object {
