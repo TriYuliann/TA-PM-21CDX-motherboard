@@ -159,16 +159,16 @@ class Menu2Fragment : Fragment() {
 
     // Metode untuk mendapatkan data dan menambahkannya ke dataList
     private fun getData() {
-        dataList.add(DataClass(R.drawable.sebalang, "Pantai Sebalang", getString(R.string.text5), R.drawable.sebalang, -5.569986,105.3413022))
-        dataList.add(DataClass(R.drawable.sariringgung, "Pantai Sari Ringgung", getString(R.string.text6), R.drawable.sariringgung, -5.5528, 105.2922))
-        dataList.add(DataClass(R.drawable.kelagian, "Pantai Pulau Kelagian", getString(R.string.text8), R.drawable.kelagian, -5.8372, 105.2277))
-        dataList.add(DataClass(R.drawable.klara, "Pantai Klara", getString(R.string.text7), R.drawable.klara, -5.7224, 105.2287))
-        dataList.add(DataClass(R.drawable.hantu, "Pantai Teluk Hantu", getString(R.string.text9), R.drawable.hantu, -5.7023, 105.2321))
-        dataList.add(DataClass(R.drawable.hiu, "Pantai Gigi Hiu", getString(R.string.text10), R.drawable.hiu, -5.7681, 105.2561))
-        dataList.add(DataClass(R.drawable.putih, "Pantai Pasir Putih", getString(R.string.text11), R.drawable.putih, -5.7226, 105.2329))
-        dataList.add(DataClass(R.drawable.mahitam, "Pantai Mahitam", getString(R.string.text12), R.drawable.mahitam, -5.7227, 105.2331))
-        dataList.add(DataClass(R.drawable.pahawang, "Pantai Pulau Pahawang", getString(R.string.text4), R.drawable.pahawang, -5.8392, 105.2279))
-        dataList.add(DataClass(R.drawable.mutun, "Pantai Mutun", getString(R.string.text3), R.drawable.mutun, -5.8401, 105.2283))
+        dataList.add(DataClass(R.drawable.sebalang, "Pantai Sebalang", getString(R.string.text5), R.drawable.sebalang, -5.5699827,105.377144))
+        dataList.add(DataClass(R.drawable.sariringgung, "Pantai Sari Ringgung", getString(R.string.text6), R.drawable.sariringgung, -5.557527,105.2515301))
+        dataList.add(DataClass(R.drawable.kelagian, "Pantai Pulau Kelagian", getString(R.string.text8), R.drawable.kelagian, -5.6293804,105.1990163))
+        dataList.add(DataClass(R.drawable.klara, "Pantai Klara", getString(R.string.text7), R.drawable.klara, -5.5830403,105.2160279))
+        dataList.add(DataClass(R.drawable.hantu, "Pantai Teluk Hantu", getString(R.string.text9), R.drawable.hantu, -5.773758,105.2113472))
+        dataList.add(DataClass(R.drawable.hiu, "Pantai Gigi Hiu", getString(R.string.text10), R.drawable.hiu, -5.7554277,105.0525071))
+        dataList.add(DataClass(R.drawable.putih, "Pantai Pasir Putih", getString(R.string.text11), R.drawable.putih, -5.5302507,105.347256))
+        dataList.add(DataClass(R.drawable.mahitam, "Pantai Mahitam", getString(R.string.text12), R.drawable.mahitam, -5.5723786,105.2391603))
+        dataList.add(DataClass(R.drawable.pahawang, "Pantai Pulau Pahawang", getString(R.string.text4), R.drawable.pahawang, -5.6709893,105.203132))
+        dataList.add(DataClass(R.drawable.mutun, "Pantai Mutun", getString(R.string.text3), R.drawable.mutun, -5.5144726,105.2618013))
 
         searchList.addAll(dataList)
         recylerView.adapter = AdapterClass(searchList)

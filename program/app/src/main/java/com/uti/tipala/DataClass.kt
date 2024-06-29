@@ -8,16 +8,16 @@ data class DataClass(
     val dataTitle: String,
     val dataDesc: String,
     val dataDetailImage: Int,
-    val latitude: Double,  // Tambahkan latitude
-    val longitude: Double // Tambahkan longitude
+    val latitude: Double,  // Latitude
+    val longitude: Double // Longitude
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readInt(),
-        parcel.readDouble(),  // Baca latitude
-        parcel.readDouble()   // Baca longitude
+        parcel.readDouble(),  // Latitude
+        parcel.readDouble()   // Longitude
     ) {
     }
 
@@ -26,8 +26,8 @@ data class DataClass(
         parcel.writeString(dataTitle)
         parcel.writeString(dataDesc)
         parcel.writeInt(dataDetailImage)
-        parcel.writeDouble(latitude)  // Tulis latitude
-        parcel.writeDouble(longitude) // Tulis longitude
+        parcel.writeDouble(latitude)  // Latitude
+        parcel.writeDouble(longitude) // Longitude
     }
 
     override fun describeContents(): Int {
