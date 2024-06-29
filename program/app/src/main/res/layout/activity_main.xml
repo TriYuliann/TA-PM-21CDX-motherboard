@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,39 +15,45 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btn_menu1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_weight="1"
-            android:layout_marginRight="5dp"
+            android:drawableLeft="@drawable/baseline_home_24"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
             android:background="@drawable/btn_box"
-            android:text="Home" />
+            android:text="Home"
+            android:textAlignment="center"
+            android:layout_marginEnd="5dp" />
 
         <Button
             android:id="@+id/btn_menu2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_weight="1"
-            android:layout_marginRight="5dp"
+            android:drawableLeft="@drawable/baseline_explore_24"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
             android:background="@drawable/btn_box"
-            android:text="Explore" />
+            android:text="Pantai"
+            android:textAlignment="center"
+            android:layout_marginEnd="5dp" />
 
         <Button
             android:id="@+id/btn_menu3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_weight="1"
-            android:layout_marginRight="5dp"
+            android:drawableLeft="@drawable/baseline_settings_accessibility_24"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
             android:background="@drawable/btn_box"
-            android:text="Profile" />
-
+            android:text="Profile"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <FrameLayout
